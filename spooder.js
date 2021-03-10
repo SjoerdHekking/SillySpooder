@@ -73,6 +73,9 @@ function result() {
   var weekdayItem = randomthingy(weekday);
   var veggieItem = randomthingy(veggie);
 
+  var name1 = "Cycy"
+  var name2 = "Gwen"
+
   newQuote = newQuote.replace(/:insertadjective:/g, adjItem).replace(/:insertadjective2:/g, adjItem2).replace(/:insertadjective3:/g, adjItem3).replace(/:insertadjective4:/g, adjItem4).replace(/:insertadjective5:/g, adjItem5).replace(/:insertnoun:/g, nounItem).replace(/:insertnoun2:/g, nounItem2).replace(/:insertpluralnoun:/g, pnounItem).replace(/:insertpluralnoun2:/g, pnounItem2).replace(/:insertpluralnoun3:/g, pnounItem3).replace(/:insertanimal:/g, animalItem).replace(/:insertcity:/g, cityItem).replace(/:insertbodypart:/g, bodyItem).replace(/:insertbodypart2:/g, bodyItem2).replace(/:insertplace:/g, placeItem).replace(/:insertwebsite:/g, webItem).replace(/:insertnumber:/g, numberItem).replace(/:insertverb:/g, verbItem).replace(/:insertadjective6:/g, adjItem6).replace(/:insertfluid:/g, fluidItem).replace(/:insertsubstance:/g, substanceItem).replace(/:insertevent:/g, eventItem).replace(/:insertanimal2:/g, animalItem2).replace(/:inserttheme:/g, themeItem).replace(/:insertweekday:/g, weekdayItem).replace(/:insertnoun3:/g, nounItem3).replace(/:insertverb2:/g, verbItem2).replace(/:insertvegetable:/g, veggieItem);
   // check of naam 1 aanwezig is en regex het weg anders niet
   if(customName1.value !== '') {
@@ -80,11 +83,23 @@ function result() {
     name = name.charAt(0).toUpperCase() + name.slice(1);
     newQuote = newQuote.replace(/:Cycy:/g, name);
   }
+  // lege var beter maken
+  if(customName1.value == '') {
+    var name = customName1.value;
+    name = name.charAt(0).toUpperCase() + name.slice(1);
+    newQuote = newQuote.replace(/:Cycy:/g, name1);
+  }
   // zelfde als 1
   if(customName2.value !== '') {
     var name = customName2.value;
     name = name.charAt(0).toUpperCase() + name.slice(1);
     newQuote = newQuote.replace(/:Gwen:/g, name);
+  }
+  // zeflde als hierboven
+  if(customName2.value == '') {
+    var name = customName2.value;
+    name = name.charAt(0).toUpperCase() + name.slice(1);
+    newQuote = newQuote.replace(/:Gwen:/g, name2);
   }
   // drukt nieuwe content naarbuiten
   Quote.innerHTML = newQuote;
