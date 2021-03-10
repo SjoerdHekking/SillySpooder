@@ -30,6 +30,7 @@ function result() {
   var adjItem3 = randomthingy(adjective);
   var adjItem4 = randomthingy(adjective);
   var adjItem5 = randomthingy(adjective);
+  var adjItem6 = randomthingy(adjective);
   var nounItem = randomthingy(noun);
   var nounItem2 = randomthingy(noun);
   var pnounItem = randomthingy(noun);
@@ -44,7 +45,7 @@ function result() {
   var numberItem = randomthingy(number);
   var verbItem = randomthingy(verb);
 
-  newQuote = newQuote.replace(/:insertx:/g, xItem).replace(/:inserty:/g, yItem).replace(/:insertadjective:/g, adjItem).replace(/:insertadjective2:/g, adjItem2).replace(/:insertadjective3:/g, adjItem3).replace(/:insertadjective4:/g, adjItem4).replace(/:insertadjective5:/g, adjItem5).replace(/:insertnoun:/g, nounItem).replace(/:insertnoun2:/g, nounItem2).replace(/:insertpluralnoun:/g, pnounItem).replace(/:insertpluralnoun2:/g, pnounItem2).replace(/:insertpluralnoun3:/g, pnounItem3).replace(/:insertanimal:/g, animalItem).replace(/:insertcity:/g, cityItem).replace(/:insertbodypart:/g, bodyItem).replace(/:insertbodypart2:/g, bodyItem2).replace(/:insertplace:/g, placeItem).replace(/:insertwebsite:/g, webItem).replace(/:insertnumber:/g, numberItem).replace(/:insertverb:/g, verbItem);
+  newQuote = newQuote.replace(/:insertx:/g, xItem).replace(/:inserty:/g, yItem).replace(/:insertadjective:/g, adjItem).replace(/:insertadjective2:/g, adjItem2).replace(/:insertadjective3:/g, adjItem3).replace(/:insertadjective4:/g, adjItem4).replace(/:insertadjective5:/g, adjItem5).replace(/:insertnoun:/g, nounItem).replace(/:insertnoun2:/g, nounItem2).replace(/:insertpluralnoun:/g, pnounItem).replace(/:insertpluralnoun2:/g, pnounItem2).replace(/:insertpluralnoun3:/g, pnounItem3).replace(/:insertanimal:/g, animalItem).replace(/:insertcity:/g, cityItem).replace(/:insertbodypart:/g, bodyItem).replace(/:insertbodypart2:/g, bodyItem2).replace(/:insertplace:/g, placeItem).replace(/:insertwebsite:/g, webItem).replace(/:insertnumber:/g, numberItem).replace(/:insertverb:/g, verbItem).replace(/:insertadjective6:/g, adjItem6);
   // check of naam 1 aanwezig is en regex het weg anders niet
   if(customName1.value !== '') {
     var name = customName1.value;
