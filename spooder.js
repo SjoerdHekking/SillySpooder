@@ -28,8 +28,6 @@ var veggie = ['fake fruit', 'apple', 'pear', 'berry', 'banana', 'watermelon', 't
 // defs van de functie controleer regex klopt niet
 function result() {
   var newQuote = randomthingy(QuoteText);
-  var xItem = randomthingy(stringX);
-  var yItem = randomthingy(stringY);
   var adjItem = randomthingy(adjective);
   var adjItem2 = randomthingy(adjective);
   var adjItem3 = randomthingy(adjective);
