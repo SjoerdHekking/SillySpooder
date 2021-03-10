@@ -25,7 +25,7 @@ var fluid = ['wator', 'water', 'beer', 'wine', 'mountain dew', 'coffee', 'thee',
 
 var substance = ['tin', 'sulfer', 'copper', 'diamond', 'sugar', 'soda', 'daimond', 'jello', 'flour', 'honey', 'sand', 'salt'];
 
-var eventthing = ['twine jam', 'discord party', 'skribbl.io tournament', 'dungeon night at Som his place', 'voice channel party', 'sugarcube livestream', 'slumber night at gwen her place', 'coding night', 'bulli cycy day', 'drawing course with berry', 'game night with redsea', ''];
+var eventthing = ['twine jam', 'discord party', 'skribbl.io tournament', 'dungeon night at Som his place', 'voice channel party', 'sugarcube livestream', 'slumber night at gwen her place', 'coding night', 'bulli cycy day', 'drawing course with berry', 'game night with redsea', 'frog catch day', 'bloodsuck day', 'nosleep vamp party'];
 
 var weekday = ['Monday', 'Teusday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
@@ -95,7 +95,7 @@ function result() {
   } else {
     newQuote = newQuote.replace(/:Gwen:/g, name2);
   }
-  
+
   // drukt nieuwe content naarbuiten
   Quote.innerHTML = newQuote;
   Quote.style.visibility = 'visible';
