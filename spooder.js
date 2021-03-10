@@ -7,7 +7,7 @@ function randomthingy(array){
   return array[Math.floor(Math.random()*array.length)];
 }
 // Var voor strings kinky
-var QuoteText = ['Cycy: :insertx: <br> Gwen: :inserty:', 'Cycy: :inserty: <br> Gwen: :insertx:'];
+var QuoteText = ["Cycy: :insertx: <br> Gwen: :inserty:", "Cycy: :inserty: <br> Gwen: :insertx:"];
 var stringX =['Oi get yur head out of the gutter','You is afraid of spooders','Am big bad dragin'];
 var stringY = ['No you not', 'Kinky', 'okay :3'];
 var adjective = [];
