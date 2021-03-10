@@ -22,7 +22,7 @@ var animal = ["Aardvark","Albatross","Alligator","Alpaca","Ant","Anteater","Ante
 var website = ["www.twinery.org", "www.twinelab.net", "www.discord.com", "wwww.motoslave.com", "www.github.com"];
 // defs van de functie controleer regex klopt niet
 function result() {
-  var newQuote = randomthingy(QuoteText);
+  var newQuote = QuoteText;
   var xItem = randomthingy(stringX);
   var yItem = randomthingy(stringY);
   var adjItem = randomthingy(adjective);
