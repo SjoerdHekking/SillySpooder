@@ -82,25 +82,20 @@ function result() {
     var name = customName1.value;
     name = name.charAt(0).toUpperCase() + name.slice(1);
     newQuote = newQuote.replace(/:Cycy:/g, name);
-  }
   // lege var beter maken
-  if(customName1.value == '') {
-    var name = customName1.value;
-    name = name.charAt(0).toUpperCase() + name.slice(1);
+  } else {
     newQuote = newQuote.replace(/:Cycy:/g, name1);
   }
-  // zelfde als 1
+
   if(customName2.value !== '') {
     var name = customName2.value;
     name = name.charAt(0).toUpperCase() + name.slice(1);
     newQuote = newQuote.replace(/:Gwen:/g, name);
-  }
-  // zeflde als hierboven
-  if(customName2.value == '') {
-    var name = customName2.value;
-    name = name.charAt(0).toUpperCase() + name.slice(1);
+  // lege var beter maken
+  } else {
     newQuote = newQuote.replace(/:Gwen:/g, name2);
   }
+  
   // drukt nieuwe content naarbuiten
   Quote.innerHTML = newQuote;
   Quote.style.visibility = 'visible';
