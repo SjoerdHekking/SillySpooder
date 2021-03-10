@@ -7,12 +7,20 @@ function randomthingy(array){
   return array[Math.floor(Math.random()*array.length)];
 }
 // Var voor strings kinky
-var QuoteText = "Cycy: :insertx: <br> Gwen: :inserty:";
+var QuoteText = ['Cycy: :insertx: <br> Gwen: :inserty:', 'Cycy: :inserty: <br> Gwen: :insertx:'];
 var stringX =['Oi get yur head out of the gutter','You is afraid of spooders','Am big bad dragin'];
 var stringY = ['No you not', 'Kinky', 'okay :3'];
+var adjective = [];
+var noun = [];
+var pluralNoun = [];
+var city = [];
+var bodyPart = [];
+var celebrity = [];
+var letterAlphabet = [];
+var verb = [];
 // defs van de functie controleer regex klopt niet
 function result() {
-  var newQuote = QuoteText;
+  var newQuote = randomthingy(QuoteText);
   var xItem = randomthingy(stringX);
   var yItem = randomthingy(stringY);
 
