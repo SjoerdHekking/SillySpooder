@@ -1,3 +1,4 @@
+  
 /* TRBRY */
 :root {
   /* colors */
@@ -14,6 +15,9 @@ body {
   padding:2rem 0 0 0;
   background-color: var(--main-cl-darker);
   color: var(--main-cl-superbright);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 body > * {
   max-width: 40rem;
@@ -63,7 +67,11 @@ label {
   line-height: 1.3;
   font-weight: 300;
   border-radius: 2px;
-  margin: 2ch auto 0 auto;
+  margin: 2ch auto 1ch auto;
   filter: drop-shadow(0px 0px 10px var(--main-cl-shade)) drop-shadow(0px 9px 19px var(--main-cl-lighter));
   border: 5px solid var(--main-cl-lighter);
+}
+.person {
+    color: var(--main-cl-interact);
+    font-weight: 900;
 }
