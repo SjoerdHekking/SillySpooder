@@ -35,7 +35,7 @@ var veggie = ['fake fruit', 'apple', 'pear', 'berry', 'banana', 'watermelon', 't
 
 var bodyPart = ["eye", "head", "leg", "arm", "chest", "censored", "finger", "waist", "belly", "elbow", "back", "face", "stomach", "hip", "foot", "hand", "nose", "mouth", "chin", "ear", "hair", "lips", "neck", "shoulder", "knee", "toe", "heel", "ankle", "cheek", "tooth", "tongue", "heart", "lung", "thighs", "buttock"];
 
-var place = ["twine server", "discord", "coffee shop", "submarine", 'somniums inn', 'sugarcube clubhouse'];
+var place = ["twine server", "discord", "coffee shop", "submarine", "somniums inn", "sugarcube clubhouse", "The Lost Harlowe", "Snowman peak", "Chapbook Lake"];
 
 var number = ["one", "two", "three", "four", 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'ninety-six'];
 
