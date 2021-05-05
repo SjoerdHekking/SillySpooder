@@ -1,22 +1,33 @@
-import {
-  QuoteText, adjective, noun, city, verb, animal, pluralNoun, fluid,
-  substance, eventthing, weekday, theme, veggie, bodyPart, place, number,
-  website,
-  colors,
-  rhymeBlu,
-  illness,
-  suspects,
-} from './store.js';
+import * as store from './store.js';
 
 const nameOne = document.getElementById('customname1');
-const customName2 = document.getElementById('customname2');
+const nameTwo = document.getElementById('customname2');
 const randomize = document.querySelector('.randomize');
 const Quote = document.querySelector('.Quote');
 
 /**
+ * add html markup to bare website from array element
+ * @param {array} array website needing html markup
+ * @return {array} array with html markup
+ * @example 'www.motoslave.com' ->
+ * '<a href="http//www.motoslave.com">www.motoslave.com</a>'
+ */
+function appendHref(array) {
+  const appWebsite = [];
+  for (let index = 0; index < array.length; index++) {
+    appWebsite[index] =
+      '<a href="http://' +
+      array[index] +
+      '">' +
+      array[index] +
+      '</a>';
+  }
+  return appWebsite;
+}
+
+/**
  * Fetch one random item from array
- *
- * @param {array} array array o cities like: Tokyo, London, Berlin etc
+ * @param {array} array any array, ecample; cities like: Tokyo, London, Berlin.
  * @return {array} one item (ex: London) from array
  */
 function randomthingy(array) {
@@ -28,8 +39,7 @@ function randomthingy(array) {
 * algorithm, which is both unbiased and efficient in terms of time and space.
 * @param {array} array the array to shuffle.
 * @return {array} a reference to array.
-* @example
-* var shuffled = require('fyshuffle')([2, 3, 5, 7, 11]);
+* @example var shuffled = require('fyshuffle')([2, 3, 5, 7, 11]);
 */
 function fyshuffle(array) {
   let remaining = array.length;
@@ -52,41 +62,43 @@ function fyshuffle(array) {
  * Generates the string/story - super huge function like mega gazillion long.
  */
 function result() {
-  let newQuote = randomthingy(QuoteText);
-  const adjItem = randomthingy(adjective);
-  const adjItem2 = randomthingy(adjective);
-  const adjItem3 = randomthingy(adjective);
-  const adjItem4 = randomthingy(adjective);
-  const adjItem5 = randomthingy(adjective);
-  const adjItem6 = randomthingy(adjective);
-  const nounItem = randomthingy(noun);
-  const nounItem2 = randomthingy(noun);
-  const nounItem3 = randomthingy(noun);
-  const pnounItem = randomthingy(pluralNoun);
-  const pnounItem2 = randomthingy(pluralNoun);
-  const pnounItem3 = randomthingy(pluralNoun);
-  const animalItem = randomthingy(animal);
-  const animalItem2 = randomthingy(animal);
-  const cityItem = randomthingy(city);
-  const bodyItem = randomthingy(bodyPart);
-  const bodyItem2 = randomthingy(bodyPart);
-  const placeItem = randomthingy(place);
-  const webItem = randomthingy(website);
-  const numberItem = randomthingy(number);
-  const verbItem = randomthingy(verb);
-  const verbItem2 = randomthingy(verb);
-  const fluidItem = randomthingy(fluid);
-  const substanceItem = randomthingy(substance);
-  const eventItem = randomthingy(eventthing);
-  const themeItem = randomthingy(theme);
-  const weekdayItem = randomthingy(weekday);
-  const veggieItem = randomthingy(veggie);
+  let newQuote = randomthingy(store.QuoteText);
+  const adjItem = randomthingy(store.adjective);
+  const adjItem2 = randomthingy(store.adjective);
+  const adjItem3 = randomthingy(store.adjective);
+  const adjItem4 = randomthingy(store.adjective);
+  const adjItem5 = randomthingy(store.adjective);
+  const adjItem6 = randomthingy(store.adjective);
+  const nounItem = randomthingy(store.noun);
+  const nounItem2 = randomthingy(store.noun);
+  const nounItem3 = randomthingy(store.noun);
+  const pnounItem = randomthingy(store.pluralNoun);
+  const pnounItem2 = randomthingy(store.pluralNoun);
+  const pnounItem3 = randomthingy(store.pluralNoun);
+  const animalItem = randomthingy(store.animal);
+  const animalItem2 = randomthingy(store.animal);
+  const cityItem = randomthingy(store.city);
+  const bodyItem = randomthingy(store.bodyPart);
+  const bodyItem2 = randomthingy(store.bodyPart);
+  const placeItem = randomthingy(store.place);
+  const webFull = appendHref(store.website);
+  const webItem = randomthingy(webFull);
+  const numberItem = randomthingy(store.number);
+  const verbItem = randomthingy(store.verb);
+  const verbItem2 = randomthingy(store.verb);
+  const fluidItem = randomthingy(store.fluid);
+  const substanceItem = randomthingy(store.substance);
+  const eventItem = randomthingy(store.eventthing);
+  const themeItem = randomthingy(store.theme);
+  const weekdayItem = randomthingy(store.weekday);
+  const veggieItem = randomthingy(store.veggie);
+  const veggieItem2 = randomthingy(store.veggie);
 
-  const illnessItem = randomthingy(illness);
-  const bluRhyItem = randomthingy(rhymeBlu);
-  const colorItem = randomthingy(colors);
+  const illnessItem = randomthingy(store.illness);
+  const bluRhyItem = randomthingy(store.rhymeBlu);
+  const colorItem = randomthingy(store.colors);
 
-  const getName = fyshuffle(suspects);
+  const getName = fyshuffle(store.suspects);
 
   const name1 = getName[0];
   const name2 = getName[1];
@@ -120,6 +132,7 @@ function result() {
       .replace(/:insertnoun3:/g, nounItem3)
       .replace(/:insertverb2:/g, verbItem2)
       .replace(/:insertvegetable:/g, veggieItem)
+      .replace(/:insertvegetable2:/g, veggieItem2)
       .replace(/:insertBluRhyme:/g, bluRhyItem)
       .replace(/:insertIllness:/g, illnessItem)
       .replace(/:insertcolor:/g, colorItem);
@@ -136,8 +149,8 @@ function result() {
         .replace(/:Cycy:/g, '<span class="person">' + name1 + '</span>');
   }
 
-  if (customName2.value !== '') {
-    let name = customName2.value;
+  if (nameTwo.value !== '') {
+    let name = nameTwo.value;
     name = name.charAt(0).toUpperCase() + name.slice(1);
     newQuote = newQuote
         .replace(/:Gwen:/g, '<span class="person">' + name + '</span>');
