@@ -249,11 +249,11 @@ export const illness = [
   'Tummy ouch', 'Dragon\'s disease', 'Head ouch', 'Laughing Death',
   'Alice in Wonderland syndrome', 'Water allergy', 'Mad cow disease',
   'Werewolf Syndrome', 'Facial Blindness', 'Sleeping Beauty Syndrome',
-  'Alien Hand Syndrome', 'Stone Man\'s Disease', 'Imposter Syndrome',
+  'Alien Hand Syndrome', 'Stone Man\'s Disease', 'Amon\'s Gus disease',
 ];
 
 // twine discord server usual suspects
 export const suspects = [
   'Cycy', 'Gwen', 'Redsea', 'Lychgate', 'Jay', 'TRBRY', 'Chapel', 'Greyelf',
-  'TME', 'Somnium', 'Haley Scribe',
+  'TME', 'Somnium', 'Haley Scribe', 'Ghost', 'Lavorther',
 ];
